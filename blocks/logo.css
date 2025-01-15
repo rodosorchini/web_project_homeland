@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__image {
+  margin: 34px auto 0;
+  width: 255px;
+  height: 69px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 584px) {
+  .logo__image {
+    width: 23px;
+    height: 23px;
+  }
+}
