@@ -1,0 +1,134 @@
+.places {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 987px;
+    margin: auto;
+}
+.places__content {
+    width: 100%;
+    margin-top: 80px;
+    column-gap: 40px;
+    display: grid;
+    grid-template-rows: auto auto 460px auto;
+    grid-template-areas:
+        "title ."
+        "title website"
+        "image paragraph"
+        "button paragraph";
+}
+.places__title {
+    font-family: "inter black 900", Arial, sans-serif;
+    font-size: 72px;
+    line-height: 76px;
+    max-width: 460px;
+    grid-area: title;
+}
+.places__image {
+    max-width: 460px;
+    height: 460px;
+    object-fit: cover;
+    box-shadow: 10px 10px 25px #00000080;
+    grid-area: image;
+}
+.places__image:hover {
+    background-color: #000;
+    opacity: 0.5;
+}
+.places__button {
+    max-width: 289px;
+    max-height: 48px;
+
+    text-decoration: none;
+    background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
+    box-shadow: 5px 5px 10px #00000040;
+    margin-top: 40px;
+    grid-area: button;
+}
+.places__text-button {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    color: #fff;
+    margin: 15px;
+}
+.places__button:hover {
+    background: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
+}
+.places__website {
+    grid-area: website;
+    margin-bottom: 40px;
+}
+.places__url {
+    font-size: 12px;
+    color: #aaaaaa;
+    line-height: 14.52px;
+}
+.places__artist {
+    margin: 0;
+}
+.places__paragraph {
+    grid-area: paragraph;
+    height: 100%;
+}
+
+.places__review {
+    max-width: 484px;
+}
+@media screen and (max-width: 768px) {
+    .places {
+        max-width: 720px;
+    }
+    .places__content {
+        grid-template-rows: auto auto 340px auto;
+    }
+    .places__title {
+        max-width: 340px;
+        font-size: 42px;
+        line-height: 46px;
+    }
+    .places__image {
+        max-width: 340px;
+        height: 340px;
+    }
+    .places__paragraph {
+        font-size: 16px;
+        line-height: 26.8px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .places {
+        max-width: 320px;
+    }
+    .places__content {
+        grid-template-areas:
+            "title"
+            "website"
+            "image"
+            "paragraph"
+            "button";
+    }
+    .places__title {
+        max-width: 288px;
+        font-size: 32px;
+        line-height: 35px;
+        margin-left: 16px;
+    }
+    .places__website {
+        max-width: 288px;
+        margin-left: 16px;
+    }
+    .places__image {
+        max-width: 320px;
+        height: 320px;
+    }
+    .places__paragraph {
+        max-width: 288px;
+        margin-left: 16px;
+    }
+    .places__button {
+        width: 288px;
+        height: 48px;
+        margin: auto;
+    }
+}
